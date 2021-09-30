@@ -29,9 +29,23 @@ const Bar = props => {
 
             {/* Hamburger Menu (Mobile) */}
             <div>
-                <button className="h-6 w-6 md:hidden block" onClick={() => setNavOpen(!navOpen)}>
-                    <img src={navOpen ? burgerClose : burgerOpen} alt="Menu Navigation Open" />
-                </button>
+                <div>
+                    <button className="h-6 w-6 md:hidden block" onClick={() => setNavOpen(!navOpen)} id="menu-button" aria-expanded="true" aria-haspopup="true">
+                        <img src={navOpen ? burgerClose : burgerOpen} alt="Menu Navigation Open" />
+                    </button>
+                </div>
+                
+                <div className={`${navOpen ? '' : 'hidden'} sm:hidden origin-top-right absolute right-0 mx-1 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
+                    <div className="py-1" role="none">
+                        {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
+                        <a href="#!" className="text-gray-700 hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-2">Product</a>
+                        <a href="#!" className="text-gray-700 hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-2">Company</a>
+                        <a href="#!" className="text-gray-700 hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-2">Connect</a>
+                        <hr />
+                        <a href="#!" className="text-gray-700 hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-2">Login</a>
+                        <a href="#!" className="text-gray-700 hover:bg-gray-200 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-2">Sign Up</a>
+                    </div>
+                </div>
             </div>
             {/* Login/Signup Button */}
             <div className="hidden md:flex md:gap-2 md:items-center md:w-auto">
