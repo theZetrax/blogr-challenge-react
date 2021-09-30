@@ -1,12 +1,12 @@
 import React from 'react';
 import NavBar from './NavBar';
 import Button from './Button';
+// CSS
+import './Header.css';
 
 const Header = props => {
-    
-    
     return (
-        <header className="pt-12 pb-24 rounded-bl-large bg-gradient-to-r from-blg-red-light to-blg-red">
+        <header className="header-bg pt-12 pb-24 rounded-bl-large bg-gradient-to-r from-blg-red-light to-blg-red">
             <NavBar.Bar />
             
             <div className="flex flex-col items-center justify-center">
