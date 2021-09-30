@@ -12,6 +12,13 @@
   background-position: -80% 80%;
 }
 
+.bg-phone {
+  background-image: linear-gradient(hsl(240, 10%, 16%), hsl(240, 10%, 16%)), url('./images/illustration-phones.svg');
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 70%;
+  background-position: 0% 0%, -80% 80%;
+}
+
 @media (max-width: 640px) {
   .bg-editor {
     background: none;
