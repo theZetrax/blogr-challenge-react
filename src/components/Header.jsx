@@ -1,47 +1,22 @@
-import React, {useState} from 'react';
-import CompanyLogo from '../images/logo.svg';
-import burgerOpen from '../images/icon-hamburger.svg';
-import burgerClose from '../images/icon-close.svg';
-import RegularButton from './Button/RegularButton';
+import React from 'react';
+import NavBar from './NavBar';
+import Button from './Button';
 
 const Header = props => {
-    const [navOpen, setNavOpen] = useState(false);
+    
     
     return (
-        <header className="pt-12 pb-24 rounded-bl-large bg-blue-300">
-            <nav className="px-20 flex flex-wrap items-center justify-between w-full pb-4  text-lg text-gray-700">
-                <div className="flex flex-row">
-                    <div id="company-logo">
-                        <a href="#!">
-                            <img src={CompanyLogo} style={{ minHeight: '30px' }} alt="Company Logo" />
-                        </a>
-                    </div>
-
-                    <div class="hidden w-full md:flex md:items-center md:w-auto md:ml-5">
-                        <a href="#!" className="">Apple</a>
-                    </div>
-                </div>
-
-
-                {/* Hamburger Menu (Mobile) */}
-                <div>
-                    <button className="h-6 w-6 md:hidden block" onClick={() => setNavOpen(!navOpen)}>
-                        <img src={navOpen ? burgerClose : burgerOpen} alt="Menu Navigation Open" />
-                    </button>
-                </div>
-                {/* Login/Signup Button */}
-                <div class="hidden md:flex md:items-center md:w-auto">
-                    <button href="#!">Login</button>
-                    <button href="#!">Sign Up</button>
-                </div>
-            </nav>
-
+        <header className="pt-12 pb-24 rounded-bl-large bg-gradient-to-r from-blg-red-light to-blg-red">
+            <NavBar.Bar />
+            
             <div className="flex flex-col items-center justify-center">
-                <div>
-                    Apple
+                <div className="font-Overpass flex flex-col justify-center pt-12 pb-8">
+                    <h3 className="text-5xl font-bold text-center text-white">A modern publishing platform</h3>
+                    <h5 className="text-center text-white">Grow your audience and build your online brand</h5>
                 </div>
-                <div>
-                    <RegularButton>Start for Free</RegularButton>
+                <div className="flex flex-row gap-2">
+                    <Button.RegularButton>Start for Free</Button.RegularButton>
+                    <Button.OutlineButton>Learn More</Button.OutlineButton>
                 </div>
             </div>
         </header>

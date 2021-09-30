@@ -1,0 +1,9 @@
+.arrow-down {
+    @apply fill-current text-black;
+    min-height: '1em';
+}
+
+.arrow-up {
+    background-color: #000;
+    transform: rotate(45);
+}
