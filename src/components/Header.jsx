@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import CompanyLogo from '../images/logo.svg';
 import burgerOpen from '../images/icon-hamburger.svg';
 import burgerClose from '../images/icon-close.svg';
+import RegularButton from './Button/RegularButton';
 
 const Header = props => {
     const [navOpen, setNavOpen] = useState(false);
@@ -35,8 +36,13 @@ const Header = props => {
                 </div>
             </nav>
 
-            <div className="flex items-center justify-center">
-                Apple
+            <div className="flex flex-col items-center justify-center">
+                <div>
+                    Apple
+                </div>
+                <div>
+                    <RegularButton>Start for Free</RegularButton>
+                </div>
             </div>
         </header>
     );
